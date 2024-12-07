@@ -12,6 +12,42 @@ $ ./get_helm.sh
 
 $helm version  ---to check version
 
+ 
+# git clone https://github.com/argoproj/argo-helm.git
+
+ $ cd argo-helm/charts/argo-cd/
+
+$kubectl create ns myargo
+
+
+$ helm dependency up
+
+$ helm install myargo . -f values.yaml -n myargo
+
+# if Error:
+
+# -- Install and upgrade CRDs
+
+
+$ kubectl get po -n myargo
+
+$ kubectl port-forward svc/myargo-argocd-server -n myargo --address 0.0.0.0 8080:443
+
+
+he ArgoCD UI will be available at http://localhost/IP:8080. Access it through your web browser.
+Now we can go to a browser and open instance_ip:8080T
+
+
+
+
+# basic commands 
+# check argocd repo
+$ kubectl create namespace argocd 
+$ helm repo list 
+
+# add argocd repo [url]
+$ go to argocd yaml in chart and deplouid argocd usinh helm install command
+
 
 
 
