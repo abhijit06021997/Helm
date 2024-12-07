@@ -1,4 +1,4 @@
-#requrnment for argocd 
+# requrnment for argocd 
 1)k8 cluster 
 2)helm 
 3)then install argocd throgh the helm 
