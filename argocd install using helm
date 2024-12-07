@@ -33,6 +33,10 @@ $kubectl port-forward svc/myargo-argocd-server -n myargo --address 0.0.0.0 8080:
 # emable port 8080 > open new window for server on terminal 
 and access argocd
 
+
+# for password
+$ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
 =================================================================
 
 
