@@ -24,12 +24,31 @@ $ helm dependency up
 
 $ helm install myargo . -f values.yaml -n myargo
 
+
+$ kubectl get svc -myargo
+
+
+$kubectl port-forward svc/myargo-argocd-server -n myargo --address 0.0.0.0 8080:443
+
+# emable port 8080 > open new window for server on terminal 
+and access argocd
+
+=================================================================
+
+
 # if Error:
 
 # -- Install and upgrade CRDs
 
 
 $ kubectl get po -n myargo
+$ kubectl get svc -n myargocd
+
+$ kubectl edit svc myargo-argocd-server -n myargocd 
+
+# change cluster ip to NodePort service 
+
+
 
 $ kubectl port-forward svc/myargo-argocd-server -n myargo --address 0.0.0.0 8080:443
 
