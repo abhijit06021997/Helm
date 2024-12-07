@@ -12,7 +12,7 @@ $ ./get_helm.sh
 
 $ helm create my-first-chart
 
-#go created folder or go with editer 
+ #go created folder or go with editer 
 
 #click >--- in left side >file>open workspace>open created chart 
 
@@ -30,7 +30,8 @@ $ kubectl create service nodeport my-svc --tcp=80:80 --dry-run=client -o yaml >s
 #add selector  in this yaml or take another yaml files.
 
 #to apply this yaml files
-$ helm install my-first-relaese  .    ----[we can give any name but should be unserastanderble of first application]
+
+$ helm install my-first-relaese  .   ----to deplploy application  ----[we can give any name but should be unserastanderble of first application]
 
 # to check created deployment
 
